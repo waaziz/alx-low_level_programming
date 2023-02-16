@@ -13,4 +13,4 @@ int main(void )
 	puts("\"Proramming is like building a mulyinqual puzzle ");
 	
 	return (0);
-}}	
+}	
