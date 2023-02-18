@@ -16,22 +16,22 @@ int main(void)
 
         srand(time(0));
         n = rand() - RAND_MAX / 2;
-	int last_digit;
+	int digit;
 	char str[100];
-	last_digit = n%10;
+	digit = n%10;
 	sprintf(str, "Last digit of %d is ", n);
 
-        if (last_digit > 5)
+        if (digit > 5)
         {
-        sprintf(str + strlen(str), "%d and is greater than 5\n", last_digit);
+        sprintf(str + strlen(str), "%d and is greater than 5\n", digit);
         }
-        else if (last_digit == 0)
+        else if (digit == 0)
         {
         sprintf(str + strlen(str), "and is 0\n");
         }
         else
         {
-        sprintf(str + strlen(str), "%d and is less than 6 and not 0\n", last_digit);
+        sprintf(str + strlen(str), "%d and is less than 6 and not 0\n", digit);
         }
 	printf("%s", str);
 
