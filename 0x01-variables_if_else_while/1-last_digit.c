@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 
 /**
  * main - print whether the number stored in
@@ -15,7 +16,7 @@ int main(void)
 
         srand(time(0));
         n = rand() - RAND_MAX / 2;
-	int last_digit = n % 10;
+	int last_digit = n%10;
 	char str[100];
 	sprintf(str, "Last digit of %d is ", n);
 
