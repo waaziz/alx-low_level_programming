@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include <string.h>
 
 /**
  * main - print whether the number stored in
@@ -12,26 +11,22 @@
 
 int main(void)
 {
-        char str[100];
         int n;
-	int t = n % 10;
+
         srand(time(0));
         n = rand() - RAND_MAX / 2;
-	sprintf(str, "Last digit of %d is ", n);
-
-        if (t > 5)
+        if (n%10 > 5)
         {
-        sprintf(str + strlen(str), "%d and is greater than 5\n", t);
+        printf("Last digit of %d is %d and is greater than 5\n", n, n%10);
         }
-        else if (t == 0)
+        else if (n%10 < 6 && n%10 !=0)
         {
-        sprintf(str + strlen(str), "and is 0\n");
+        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n%10);
         }
         else
         {
-        sprintf(str + strlen(str), "%d and is less than 6 and not 0\n", t);
+        printf("Last digit of %d is %d and is 0\n", n, n%10);
         }
-	printf("%s", str);
 
-	return (0);
+        return (0);
 }
